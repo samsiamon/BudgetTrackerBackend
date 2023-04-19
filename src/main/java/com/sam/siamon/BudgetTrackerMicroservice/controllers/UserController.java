@@ -29,7 +29,7 @@ public class UserController {
     public Optional<User> getUserById(@PathVariable("id") UUID id) {
         return userService.findById(id);
     }
-    @GetMapping("/{email}")
+    @GetMapping("email/{email}")
     public Optional<User> getUserByEmail(@PathVariable("email") String email) {
         return userService.findByEmail(email);
     }
